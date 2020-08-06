@@ -14,6 +14,7 @@ function init() {
     })
 };
 
+
 // when dropdown is changed, 
 // volunteer demographics and charts are updated
 function optionChanged(newSample) {
@@ -135,4 +136,6 @@ function buildBubbleChart(sample){
 
 
 init();
+// initial loading for id 940
+optionChanged(940);
   
