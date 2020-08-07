@@ -76,7 +76,10 @@ function buildBarChart(sample){
     };
 
     var layout = {
+      title: "Top 10 bacterial species (OTUs)",
+      xaxis:{title: "Sample Values"},
       yaxis:{
+        title:"UTO IDs",
         autorange:'reversed'
       }
     };
@@ -91,21 +94,10 @@ function buildBubbleChart(sample){
     var samplesData = data.samples;
     var resultArray = samplesData.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
-
-    // put all three arrays into dictionary format
-    var allSampleData = [];
-
-    for (i = 0; i < result.otu_ids.length; i++) {
-      allSampleData.push({
-        otu_ids: result.otu_ids[i],
-        sample_values: result.sample_values[i],
-        otu_labels: result.otu_labels[i]
-      });
-    };
-
-    var values = allSampleData.map(val=>val.sample_values);
-    var ids = allSampleData.map(lab=>lab.otu_ids);
-    var labels = allSampleData.map(t=>t.otu_labels);
+    // set the data arrays
+    var values = result.sample_values;
+    var ids = result.otu_ids;
+    var labels = result.otu_labels;
 
     var PANEL = d3.select("#bubble");
 
@@ -122,17 +114,15 @@ function buildBubbleChart(sample){
     };
     
     var bubbleLayout = {
-      xaxis:{title: "OTU ID"}
+      title: "Bacterial species (OTU) Sample value",
+      xaxis:{title: "OTU ID"},
+      yaxis:{title: "Sample value"}
     }
 
     Plotly.newPlot("bubble", [bubbleTrace], bubbleLayout);
-  
-
   });  
-
-
-
 };
+
 
 
 init();
