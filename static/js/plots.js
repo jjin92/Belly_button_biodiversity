@@ -14,7 +14,6 @@ function init() {
     })
 };
 
-
 // when dropdown is changed, 
 // volunteer demographics and charts are updated
 function optionChanged(newSample) {
