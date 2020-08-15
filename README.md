@@ -12,7 +12,7 @@ Utilize JavaScript, Plotly library, and HTML to create a data dashboard with int
 
 ### Resources
 *Data*
-- [Sample data in JSON format](https://github.com/jjin92/Belly_button_biodiversity/blob/master/static/js/samples.json)
+- [Sample data in JSON format](https://github.com/jjin92/Belly_button_biodiversity/blob/master/samples.json)
 
 *Software*
 - JavaScript, d3.js, Plotly.js, HTML, Bootstrap, CSS
