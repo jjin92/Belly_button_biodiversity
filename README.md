@@ -10,7 +10,7 @@ Utilize JavaScript, Plotly library, and HTML to create a data dashboard with int
 - Display a bar chart to list the top 10 bacteria in quantity
 - Display a bubble chart to illustrate all bacteria ID and their quantity in bubble size
 
-### Resources
+### Technologies and Resources
 *Data*
 - [Sample data in JSON format](https://github.com/jjin92/Belly_button_biodiversity/blob/master/samples.json)
 
